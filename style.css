@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Fugit-Light;
+  src: url(assets/type/Fugit-Light.otf);
+}
+
+@font-face {
+  font-family: Pantasia-Regular;
+  src: url(assets/type/PantasiaUnlicencedTrial-Regular.otf);
+}
+
+@font-face {
+  font-family: PPRightSerifMono-Fine;
+  src: url(assets/type/PPRightSerifMono-Fine.otf);
+}
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  cursor: ne-resize;
+  /* overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: url("assets/Artboard 1-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  background: none;
+}
+
+#txt {
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  overflow: scroll;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#txt span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 auto;
+  font-family: "Fugit-Light";
+  max-height: 95vh;
+  background-color: white;
+
+  max-width: 700px;
+  width: 95vw;
+  text-align: center;
+  text-justify: justify;
+  line-height: 40px;
+  letter-spacing: 2px;
+  z-index: 2;
+  text-overflow: ellipsis;
+  object-fit: contain;
+  word-break: keep-all;
+}
+
+.hidden-letter {
+  display: none;
+}
+
+/* custom cursor */
+#circularcursor {
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 20px;
+  pointer-events: none;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 9999;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  cursor: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+  cursor: none;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-around;
+  grid-row-gap: 1px;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  padding: 1px;
+
+}
+
+.main>div {
+  text-align: center;
+  padding: 15px;
+
+}
+.pink:hover{
+  color:rgb(205, 156, 215);
+}
+.main div:hover{
+ color:rgb(156, 215, 196);
+
+
+}
+.husk {
+  position: relative;
+  margin: 0;
+}
+
+
+.ripened {
+  font-family: "PPRightSerifMono-Fine", monospace;
+
+  /* font-family: "Fugit-Light"; */
+  font-size: 0.8em;
+  letter-spacing: 0px;
+
+
+}
+
+
+.rosary {
+  /* font-family: "Director", monospace ; */
+  font-size: 1em;
+  padding: -2em;
+  font-family: "Pantasia-Regular";
+  letter-spacing: -2px;
+
+}
+
+.about.rosary {
+  letter-spacing: 0px;
+}
+
+.earthseed {
+  font-family: "Fugit-Light";
+  font-size: 1.5em;
+  letter-spacing: -1.4px;
+
+}
+
+.green-fruit:hover {
+  background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(109, 247, 173, 0.3),
+    inset 0 0 80px 40px rgba(109, 247, 173, 0.3),
+
+    0 0 40px 20px rgba(109, 247, 173, 0.2);
+
+
+}
+
+.purple-fruit:hover {
+  background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(227, 146, 239, 0.3),
+    inset 0 0 80px 40px rgba(227, 146, 239, 0.3),
+
+    0 0 40px 20px rgba(227, 146, 239, 0.2);
+
+}
+
+.blue-fruit:hover {
+
+  background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(187, 182, 245, 0.3),
+    inset 0 0 5px 40px rgba(187, 182, 245, 0.3),
+
+    0 0 40px 20px rgba(187, 182, 245, 0.2);
+
+}
+
+.yellow-fruit:hover {
+  background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(231, 237, 146, 0.3),
+    inset 0 0 5px 40px rgba(231, 237, 146, 0.3),
+
+    0 0 40px 20px rgba(231, 237, 146, 0.2);
+
+
+
+
+}
+
+
+.burst {
+  position: fixed;
+  background: none;
+  color: #3a3a3a;
+  object-fit: cover;
+  padding: 6px 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+  border-radius: 70px;
+
+}
+
+.burst img {
+
+  width: 150px;
+  height: auto;
+}
+
+.glow {
+  border-radius: 50%;
+
+
+}
+
+@media (max-width: 600px) {
+
+  .main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  grid-row-gap: 1px;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  padding: 1px;
+
+}
+.earthseed {
+ 
+  font-size: 1.2em;
+
+}
+
+}
