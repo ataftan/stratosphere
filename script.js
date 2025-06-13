@@ -21,6 +21,7 @@ $('.husk').each(function () {
   });
 });
 
+
 $(".i").on("click", function () {
   const $txt = $("#txt");
   if ($txt.is(":visible")) {
@@ -36,16 +37,42 @@ $(".i").on("click", function () {
 
 
 
-// $("body").on("click", function (e) {
 
-//   if ($(e.target).closest(".hypertext").length > 0) {
-//     return; // do nothing if clicked inside about button
-//   }
-//   $(this).toggleClass("toggled");
+function wrapWordsInNode(node) {
+  for (let i = node.childNodes.length - 1; i >= 0; i--) {
+    const child = node.childNodes[i];
 
-//   if ($(this).hasClass("toggled")) {
-//     $('#pre-txt').fadeIn();
-//   } else {
-//     $('#pre-txt').fadeOut();
-//   }
-// });
+    if (child.nodeType === Node.TEXT_NODE) {
+      // Split text node into words and spaces
+      const words = child.textContent.split(/(\s+)/);
+      const frag = document.createDocumentFragment();
+
+      words.forEach(word => {
+        if (/\s+/.test(word)) {
+          // whitespace as is
+          frag.appendChild(document.createTextNode(word));
+        } else if (word.length > 0) {
+          // wrap word in span.word
+          const span = document.createElement('span');
+          span.className = 'word';
+          span.textContent = word;
+          frag.appendChild(span);
+        }
+      });
+
+      child.replaceWith(frag);
+
+    } else if (child.nodeType === Node.ELEMENT_NODE) {
+      // recurse into spans or other elements
+      wrapWordsInNode(child);
+    }
+  }
+}
+
+// Run this after DOM is loaded:
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.rosary.husk.spiraltime p').forEach(p => {
+    wrapWordsInNode(p);
+  });
+});
+  
