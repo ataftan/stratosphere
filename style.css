@@ -124,10 +124,19 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: blue;
+  /* color: blue; */
   cursor: none;
 }
 
+a:hover{
+    background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(227, 146, 239, 0.3),
+    inset 0 0 80px 40px rgba(227, 146, 239, 0.3),
+
+    0 0 40px 20px rgba(227, 146, 239, 0.2);
+}
 .main {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
@@ -189,6 +198,12 @@ a:hover {
 .hypertext {
   padding: 3px;
 }
+.citation{
+  font-family: "Fugit-Light";
+  letter-spacing: -1.4px;
+  font-size: 0.1em;
+
+}
 
 .earthseed {
   font-family: "Fugit-Light";
@@ -197,7 +212,7 @@ a:hover {
 
 }
 
-.spiraltime{
+.spiraltime-1{
   grid-row: 4 /span 6;
   grid-column: 2 / span 3;
 }
@@ -232,6 +247,7 @@ a:hover {
 
 }
 
+
 .blue-fruit:hover {
 
   background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
@@ -242,7 +258,7 @@ a:hover {
 
     0 0 40px 20px rgba(187, 182, 245, 0.2);
 
-}
+} 
 
 .yellow-fruit:hover {
   background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
@@ -280,13 +296,30 @@ a:hover {
   height: auto;
 }
 
-.glow {
-  border-radius: 50%;
+.circular{
+    border-radius: 50%;
 
+}
+.glow {
+   background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 100px 40px rgba(227, 146, 239, 0.3),
+    inset 0 0 80px 40px rgba(227, 146, 239, 0.3),
+
+    0 0 40px 20px rgba(227, 146, 239, 0.2);
 
 }
 
+
+#stratosphere img {
+  pointer-events: none;
+}
 @media (max-width: 600px) {
+#txt span {
+  font-size: 1rem;
+
+}
 
   .main {
     display: grid;
@@ -298,13 +331,12 @@ a:hover {
 
   }
 
-  .earthseed {
 
+  .earthseed {
+    
     font-size: 1.2em;
 
   }
 
+
 }
-
-
-

@@ -36,16 +36,16 @@ $(".i").on("click", function () {
 
 
 
-$("body").on("click", function (e) {
+// $("body").on("click", function (e) {
 
-  if ($(e.target).closest(".hypertext").length > 0) {
-    return; // do nothing if clicked inside about button
-  }
-  $(this).toggleClass("toggled");
+//   if ($(e.target).closest(".hypertext").length > 0) {
+//     return; // do nothing if clicked inside about button
+//   }
+//   $(this).toggleClass("toggled");
 
-  if ($(this).hasClass("toggled")) {
-    $('#pre-txt').fadeIn();
-  } else {
-    $('#pre-txt').fadeOut();
-  }
-});
+//   if ($(this).hasClass("toggled")) {
+//     $('#pre-txt').fadeIn();
+//   } else {
+//     $('#pre-txt').fadeOut();
+//   }
+// });
