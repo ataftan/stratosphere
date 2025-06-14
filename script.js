@@ -6,6 +6,9 @@ $('.husk').each(function () {
   const offsetY = parseInt($container.data('offset-y')) || 0;
 
   $touched.on('mouseenter', function () {
+    const id = $(this).data('id');
+    $burst.find('.citation').css('opacity', 0); // hide all
+    $burst.find(`.citation[data-id="${id}"]`).css('opacity', 1); // show matching one
     $burst.css('opacity', 1);
   });
 

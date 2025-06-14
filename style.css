@@ -314,9 +314,7 @@
 
   }
 
-  .pink-white{
-  color:rgb(198, 114, 211);
-  }
+ 
   .pink-white:hover{
     background: radial-gradient(circle at center, white 70%, rgba(245, 255, 250, 1) 100%);
     border-radius: 20px;
@@ -326,7 +324,6 @@
 
       0 0 40px 20px rgba(227, 146, 239, 0.5);
       
-  color:rgb(153, 44, 174);
   }
 
   #stratosphere img {
